@@ -3,6 +3,7 @@ import './userform.css';
 import { country_codes } from '../../Utils/phoneCodes';
 import crimsonCupBranches from '../../Utils/locations';
 import { useDropzone } from 'react-dropzone';
+import { handleAddUser } from '../../Utils/firebaseHelpers';
 
 const UserForm = () => {
     // State to store the selected image
@@ -25,13 +26,13 @@ const UserForm = () => {
     const handleSubmit = (e) => {
         e.preventDefault();
         // Access form data including the image
-        console.log('Submitted:', {
-            firstName: e.target.elements.firstName.value,
-            lastName: e.target.elements.lastName.value,
+        handleAddUser({
+            name: `${e.target.elements.firstName.value} ${e.target.elements.lastName.value}`,
             email: e.target.elements.email.value,
             phone: e.target.elements.phone.value,
-            jobtitle: e.target.elements.jobtitle.value,
-            image: image,
+            gender: 'male',
+            branch: e.target.elements.jobtitle.value,
+            photo: image,
         });
         // You can add further logic here to send the form data to the server
     };

@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import crimsonCupBranches from '../Utils/locations';
 import { handleAddUser } from '../Utils/firebaseHelpers';
 import UserForm from './User/UserForm';
+import UserList from './User/UserList';
 
 const Admin = () => {
   const [formData, setFormData] = useState({
@@ -44,7 +45,7 @@ const Admin = () => {
   return (
     <div>
       <h2>Admin Form</h2>
-      
+      <UserList />
       {/*  <form onSubmit={handleSubmit}>
         <div>
           <label>Name:</label>
