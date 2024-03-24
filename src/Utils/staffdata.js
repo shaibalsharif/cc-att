@@ -508,4 +508,116 @@ export const staffData = [
         joiningDate: "2024-06-15",
         employmentStatus: "Active"
     },
+
+    /* MAnagers */
+    {
+        first_name: "John",
+        last_name: "Smith",
+        id: "MG101",
+        email: "john.smith@example.com",
+        designation: "Manager",
+        phone: "+1 123 456 7890",
+        branchName: "Mirpur 12",
+        joiningDate: "2022-01-01",
+        employmentStatus: "Full-time",
+        gender: 'male'
+    },
+    {
+        first_name: "Jane",
+        last_name: "Doe",
+        id: "MG102",
+        email: "jane.doe@example.com",
+        designation: "Manager",
+        phone: "+1 234 567 8901",
+        branchName: "Mirpur 2",
+        joiningDate: "2022-01-01",
+        employmentStatus: "Full-time",
+        gender: 'female'
+    },
+    {
+        first_name: "Michael",
+        last_name: "Johnson",
+        id: "MG103",
+        email: "michael.johnson@example.com",
+        designation: "Manager",
+        phone: "+1 345 678 9012",
+        branchName: "Uttara",
+        joiningDate: "2022-01-01",
+        employmentStatus: "Full-time",
+        gender: 'male'
+    },
+    {
+        first_name: "Emily",
+        last_name: "Williams",
+        id: "MG104",
+        email: "emily.williams@example.com",
+        designation: "Manager",
+        phone: "+1 456 789 0123",
+        branchName: "Basundhara",
+        joiningDate: "2022-01-01",
+        employmentStatus: "Full-time",
+        gender: 'female'
+    },
+    // Add more managers here
+    {
+        first_name: "Robert",
+        last_name: "Brown",
+        id: "MG105",
+        email: "robert.brown@example.com",
+        designation: "Manager",
+        phone: "+1 567 890 1234",
+        branchName: "Banani",
+        joiningDate: "2022-01-01",
+        employmentStatus: "Full-time",
+        gender: 'male'
+    },
+    {
+        first_name: "Olivia",
+        last_name: "Jones",
+        id: "MG106",
+        email: "olivia.jones@example.com",
+        designation: "Manager",
+        phone: "+1 678 901 2345",
+        branchName: "Gulshan-1",
+        joiningDate: "2022-01-01",
+        employmentStatus: "Full-time",
+        gender: 'female'
+    },
+    {
+        first_name: "William",
+        last_name: "Miller",
+        id: "MG107",
+        email: "william.miller@example.com",
+        designation: "Manager",
+        phone: "+1 789 012 3456",
+        branchName: "Dhanmondi 27",
+        joiningDate: "2022-01-01",
+        employmentStatus: "Full-time",
+        gender: 'male'
+    },
+    {
+        first_name: "Sophia",
+        last_name: "Wilson",
+        id: "MG108",
+        email: "sophia.wilson@example.com",
+        designation: "Manager",
+        phone: "+1 890 123 4567",
+        branchName: "Chattogram",
+        joiningDate: "2022-01-01",
+        employmentStatus: "Full-time",
+        gender: 'female'
+    },
+    // Super Manager
+    {
+        first_name: "Super",
+        last_name: "Manager",
+        id: "SM001",
+        email: "super.manager@example.com",
+        designation: "Super Manager",
+        phone: "+1 999 999 9999",
+        joiningDate: "2022-01-01",
+        employmentStatus: "Full-time",
+        gender: 'male'
+    }
+    /* Managers */
 ]

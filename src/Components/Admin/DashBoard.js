@@ -1,9 +1,9 @@
 import React, { useState } from 'react'
-import LocationSelector from './LocationSelector'
-import on from '../Utils/on.png'
+import LocationSelector from '../LocationSelector'
+// import on from '../assets/images/on.png'
 
-import off from '../Utils/off.png'
-const Dashnoard = () => {
+// import off from '../assets/images/off.png'
+const DashBoard = () => {
 
     const [shiftOn, setShiftOn] = useState(false)
 
@@ -17,9 +17,9 @@ const Dashnoard = () => {
                 <div className='h-20   w-[35%] md:w-[20%] lg:w-[15%] xl:[10%] rounded-full flex justify-center items-center'>
 
                     <button onClick={() => { setShiftOn(!shiftOn) }} className='w-full h-full'><img
-                        className={`w-full h-full object-contain my-auto ${shiftOn ? ' bg-white ' : ' !bg-black '} rounded-l-full`} src={on} /></button>
+                        className={`w-full h-full object-contain my-auto ${shiftOn ? ' bg-white ' : ' !bg-black '} rounded-l-full`} src={''/* on */} /></button>
                     <button onClick={() => { setShiftOn(!shiftOn) }} className='w-full h-full'> <img
-                        className={`w-full h-full object-contain my-auto ${!shiftOn ? ' bg-white ' : ' !bg-black '}rounded-r-full`} src={off} /></button>
+                        className={`w-full h-full object-contain my-auto ${!shiftOn ? ' bg-white ' : ' !bg-black '}rounded-r-full`} src={''/* off */} /></button>
 
                 </div>
             </div>
@@ -29,4 +29,4 @@ const Dashnoard = () => {
     )
 }
 
-export default Dashnoard
+export default DashBoard

@@ -38,13 +38,13 @@ const UserForm = () => {
     };
 
     return (
-        <div className="container mx-auto sm:px-4">
+        <div className="container mx-auto sm:px-4 py-20">
             <div className="md:w-3/5 px-4 lg:w-1/2 ml-auto">
                 <form onSubmit={handleSubmit}>
                     <div className="grid grid-cols-1 md:grid-cols-2">
 
                         {/* First Name */}
-                        <div className="relative flex items-center border-md rounded-md w-full lg:w-1/2 px-4 mb-4">
+                        <div className="relative flex items-center  rounded-md w-full lg:w-1/2  mb-4">
                             <input
                                 id="firstName"
                                 type="text"
@@ -55,7 +55,7 @@ const UserForm = () => {
                         </div>
 
                         {/* Last Name */}
-                        <div className="relative flex items-center border-md rounded-md w-full lg:w-1/2 px-4 mb-4">
+                        <div className="relative flex items-center  rounded-md w-full lg:w-1/2  mb-4">
                             <input
                                 id="lastName"
                                 type="text"
@@ -66,7 +66,7 @@ const UserForm = () => {
                         </div>
 
                         {/* Email Address */}
-                        <div className="relative flex items-center w-full lg:w-full px-4 mb-4 border-md rounded-md">
+                        <div className="relative flex items-center w-full lg:w-full  mb-4  rounded-md">
                             <input
                                 id="email"
                                 type="email"
@@ -77,7 +77,7 @@ const UserForm = () => {
                         </div>
 
                         {/* Phone Number */}
-                        <div className="relative flex items-center w-full lg:w-full px-4 mb-4 border-md rounded-md">
+                        <div className="relative flex items-center w-full lg:w-full  mb-4  rounded-md">
                             {/* Select dropdown for country code */}
                             <select
                                 id="countryCode"
@@ -101,7 +101,7 @@ const UserForm = () => {
                         </div>
 
                         {/* Job */}
-                        <div className="relative flex items-center w-full lg:w-full px-4 mb-4 border-md rounded-md">
+                        <div className="relative flex items-center w-full lg:w-full  mb-4  rounded-md">
                             <select
                                 id="job"
                                 name="jobtitle"
@@ -126,7 +126,7 @@ const UserForm = () => {
                         {/* Submit Button */}
                         <div className="mb-4 lg:w-full px-4 mx-auto mb-0">
                             <button type="submit" className="inline-block align-middle text-center select-none border font-normal whitespace-no-wrap rounded py-1 px-3 leading-normal no-underline bg-blue-600 text-white hover:bg-blue-600 block w-full py-2">
-                                <span className="font-bold">Create your account</span>
+                                <span className="font-bold">Add New Staff</span>
                             </button>
                         </div>
 
