@@ -621,3 +621,30 @@ export const staffData = [
     }
     /* Managers */
 ]
+
+export const designations = [
+    {
+        "designation": "Barista",
+        "description": "Responsible for preparing and serving coffee and other beverages, as well as maintaining cleanliness and customer service."
+    },
+    {
+        "designation": "Cashier",
+        "description": "Responsible for handling transactions, processing payments, and providing customer service at the counter."
+    },
+    {
+        "designation": "Shift Supervisor",
+        "description": "Responsible for overseeing daily operations, managing staff, handling customer inquiries, and ensuring smooth workflow during shifts."
+    },
+    {
+        "designation": "Chef",
+        "description": "Responsible for preparing and cooking food items, maintaining kitchen cleanliness, and ensuring food quality and safety."
+    },
+    {
+        "designation": "Manager",
+        "description": "Responsible for overall management of the branch, including staff supervision, inventory management, customer satisfaction, and operational efficiency."
+    },
+    {
+        "designation": "Super Manager",
+        "description": "Responsible for overseeing multiple branches, setting company policies, ensuring consistency across branches, and strategic decision-making."
+    }
+]
