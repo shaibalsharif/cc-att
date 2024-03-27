@@ -37,24 +37,27 @@ const UserForm = () => {
 
 
         }
-        console.log(user_data);
-        // handleAddUser({
-
-
-        //     first_name: `${e.target.elements.firstName.value}`,
-        //     last_name: `${e.target.elements.lastName.value}`,
-        //     name: `${e.target.elements.firstName.value} ${e.target.elements.lastName.value}`,
-        //     email: e.target.elements.email.value,
-        //     phone: e.target.elements.phone.value,
-        //     gender: 'male',
-        //     branch: e.target.elements.jobtitle.value,
-        //     photo: image,
-        // });
+       
+        handleAddUser({
+            id: user_data.id,
+            first_name: user_data.firstname,
+            last_name: user_data?.lastname,
+            name: `${user_data.firstname} ${user_data?.lastname}`,
+            email: user_data?.email,
+            phone: `${user_data?.country_code}${user_data?.phone}`,
+            sex: user_data?.sex,
+            branch: user_data?.branchtitle,
+            job_type: user_data?.job_type,
+            address: user_data?.address,
+            dob: user_data?.dob,
+            join_date: user_data?.join_date,
+            photo: image,
+        });
         // You can add further logic here to send the form data to the server
     };
 
     return (
-        <div className="container mx-auto sm:px-4 py-20 md:flex h-full overflow-scroll ">
+        <div className="container mx-auto sm:px-4 py-20 md:flex h-full ">
             <div className='hidden lg:block w-1/2 ' style={{ backgroundImage: `url(${barista_bg})`, backgroundSize: 'cover' }} >
                 {/* <img className=' object-cover overflow-hidden' src={barista_bg} /> */}
                 {/*  <div className='bg-gradient-to-br from-[#e7e5e583] to-[#f30f0f] h-full w-full'>
@@ -64,7 +67,7 @@ const UserForm = () => {
 
             <div className="w-full md:w-4/5 px-4 lg:w-1/2 lg:ml-auto pb-20">
                 <form onSubmit={handleSubmit}>
-                    <div className="grid grid-cols-1 md:grid-cols-2">
+                 
                         <div className="relative flex items-center w-full lg:w-full  mb-4  rounded-md">
                             <input
                                 id="id"
@@ -75,7 +78,7 @@ const UserForm = () => {
                             />
                         </div>
                         <div className='grid grid-cols-1 md:grid-cols-2 gap-2'>
-                            <div className="relative flex items-center  rounded-md w-full lg:w-1/2  mb-4">
+                            <div className="relative flex items-center  rounded-md w-full   mb-4">
                                 <input
                                     id="firstName"
                                     type="text"
@@ -86,7 +89,7 @@ const UserForm = () => {
                             </div>
 
                             {/* Last Name */}
-                            <div className="relative flex items-center  rounded-md w-full lg:w-1/2  mb-4">
+                            <div className="relative flex items-center  rounded-md w-full   mb-4">
                                 <input
                                     id="lastName"
                                     type="text"
@@ -110,18 +113,20 @@ const UserForm = () => {
                                     placeholder="Email Address"
                                     className="block appearance-none w-full py-1 px-2 mb-1 text-base leading-normal bg-white text-gray-800 rounded"
                                 />
-                            </div>  {/* Phone Number */}
-                            <div className="relative flex items-center w-full lg:w-full  mb-4  rounded-md">
+                            </div> 
+                             {/* Phone Number */}
+                            <div className="overflow-hidden relative flex items-center w-full lg:w-full  mb-4  rounded-md">
                                 {/* Select dropdown for country code */}
                                 <select
                                     id="countryCode"
                                     name="countryCode"
                                     style={{ maxWidth: 80 }}
-                                    className="custom-select block appearance-none w-full py-1 px-2 mb-1 text-base leading-normal bg-white text-gray-800 h-full font-bold --text-gray-700"
+                                    className="custom-select block appearance-none w-full  px-2 mb-2 text-base leading-normal
+                                     bg-white text-gray-800 h-full font-semibold --text-gray-700"
                                 >
                                     {/* Options for country codes */}
                                     {country_codes.map(el => {
-                                        return <option value={el.phone_code}>{el.short_code} +{el.phone_code}</option>
+                                        return <option selected={el.short_code=="BD"} value={el.phone_code}>{el.short_code} +{el.phone_code}</option>
                                     })}
                                 </select>
                                 {/* Input field for phone number */}
@@ -231,9 +236,9 @@ const UserForm = () => {
                                 <p className='w-full text-center !bg-yellow-500'>Drag 'n' drop an image here, or click to select one</p>
                                 <div className='h-2 w-full text-sm text-white font-semibold py-1'>
                                     {!image ? <p>No Selected file</p> : <p>Slected File :
-                                        <span className='bg-gray-400 px-2 rounded-sm' >{image?.name}</span> <br/>
-                                        <span className='bg-gray-400 px-1' >{(image?.size / 1024 / 1024).toFixed(2)} MB</span>
-                                        <span><button>Preview</button></span>
+                                        <span className='bg-gray-400 px-2 rounded-sm' >{image?.name}</span> <br />
+                                        <span className='bg-gray-400 px-2 rounded-sm' >{(image?.size / 1024 / 1024).toFixed(2)} MB</span>
+                                        {/*    <span><button>Preview</button></span> */}
                                     </p>}
                                 </div>
                             </div>
@@ -266,7 +271,7 @@ const UserForm = () => {
                                 </a>
                             </p>
                         </div> */}
-                    </div>
+                    
                 </form>
             </div>
         </div>
