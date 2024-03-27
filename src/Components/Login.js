@@ -37,13 +37,14 @@ const GoogleButton = ({ signinHandler }) => {
 //     </div>
 // }
 
-const Login = ({setter}) => {
+const Login = ({ setter }) => {
 
     const [loading, setLoading] = useState(false)
 
     const navigate = useNavigate()
     const [user_email, setuser_email] = useState("null")
     const [user_pass, setuser_pass] = useState("null")
+    const [user, setUser] = useState(null)
     const [error, setError] = useState('')
     const handlechange = (e, setter) => {
         setter(e.target.value)
@@ -119,7 +120,7 @@ const Login = ({setter}) => {
                     <label className='text-start'>Password</label>
                     <input value={user_pass} onChange={(e) => handlechange(e, setuser_pass)} type='password' className='w-full mx-auto px-4 py-2 rounded-md' />
                     <error className="min-h-6 text-sm text-red-500 py-1 font-[500] tracking-wider">{error}</error>
-                    
+
                     <button className="w-full" onClick={(e) => dummySignIn(e, user_email, user_pass)}>Login</button>
                 </div>
                 <div className='w-full flex justify-center gap-2 text-white text-sm  py-1'>
